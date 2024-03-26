@@ -187,17 +187,17 @@ function App() {
   };
 
   return (
-    <div className='mbtilayout' >
+    <div className='mbtilayout d-flex align-items-center justify-content-center' >
       {page === 0 ?
-        <div className='startlayout'>
-          <div className='startlogo'>
+        <div className='startlayoutd-flex flex-column align-items-center -justify-content-center'>
+          <div className='startlogo d-flex flex-column align-items-center -justify-content-center'>
             <div>나한테 어울리는 여행지는 ?</div>
             <div>▼</div>
           </div>
           <div className='startbtn' onClick={() => setpage(1)}>테스트 시작하기</div>
         </div>
         : page <= qalist.length ?
-          <div className='qalayout'>
+          <div className='qalayout d-flex flex-column'>
             <div className='ttitle'>
               <div>나한테 어울리는 여행지는 ?</div>
               <div>{`${page} / ${qalist.length}`}</div>
@@ -205,16 +205,22 @@ function App() {
             {qalist.map((qa, i) => (
               <div className='qalist' style={{ display: page === i + 1 ? 'flex' : 'none' }}>
                 <div className='qaitem'>
-                  <div className='profile'>
-                    <div />
-                    <div />
+
+                  <div className='question d-flex'>
+                    <div className='profile d-flex flex-column align-items-center justify-content-center'>
+                      <div />
+                      <div />
+                    </div>
+                    <div className='chacdk'>◀︎
+                    </div>
+                    <div className='chatBox'>{qa.q}</div>
                   </div>
                   <div>
-                    <div className='question'>{qa.q}</div>
+
                   </div>
-                  <div className='answers'>
+                  <div className='answers '>
                     {qa.a.map((answer, index) => (
-                      <div className='answer' key={index} onClick={() => handleAnswerClick(answer.nextPage)}>
+                      <div className='answer ' key={index} onClick={() => handleAnswerClick(answer.nextPage)}>
                         {answer.text}
                       </div>
                     ))}

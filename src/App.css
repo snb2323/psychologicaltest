@@ -1,17 +1,10 @@
 .mbtilayout {
   width: 100vw;
   font-size: 14px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
   height: calc(var(--vh, 1vh)*100);
 }
 
 .startlayout {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
   background-color: #ffea35;
   width: 100%;
   max-width: 900px;
@@ -20,10 +13,7 @@
 }
 
 .startlogo {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
+
   font-size: 25px;
   font-weight: 700;
 }
@@ -50,8 +40,6 @@
 }
 
 .qalayout {
-  display: flex;
-  flex-direction: column;
   background-color: #bacee0;
   width: 100%;
   max-width: 900px;
@@ -89,10 +77,13 @@
 .answer {
   width: 100%;
   background-color: #a1b6e9;
-
   padding-bottom: 10px;
   display: flex;
   flex-direction: column;
+}
+
+.answer div :nth-child(1) {
+  padding: 100px;
 }
 
 .qaiteam {
@@ -102,14 +93,11 @@
 }
 
 .profile {
-  display: flex;
-  flex-direction: column;
   width: 40px;
   height: 40px;
   background-color: #a1b6e9;
-  margin-right: 5px;
-  align-items: center;
-  justify-content: center;
+  margin-right: 7px;
+  border-radius: 15px;
 }
 
 .profile div:nth-child(1) {
@@ -122,8 +110,31 @@
 .profile div:nth-child(2) {
   background-color: #cbd6f2;
   width: 16px;
-  height: 16px;
+  height: 8px;
   border-radius: 8px 8px 0px 0px;
   margin-top: 2px;
 
 }
+
+.question {
+  margin: 20px;
+  display: flex;
+  flex-direction: row;
+}
+
+.chatBox {
+  padding: 7px 10px 7px 10px;
+  background-color: #fff;
+  margin-left: -4px;
+  border-radius: 10px;
+  line-height: 2;
+
+}
+
+.chacdk {
+  margin-top: 7px;
+  display: flex;
+  color: #fff;
+}
+
+.qalist {}
