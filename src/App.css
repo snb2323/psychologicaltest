@@ -1,38 +1,129 @@
-.App {
-  text-align: center;
+.mbtilayout {
+  width: 100vw;
+  font-size: 14px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: calc(var(--vh, 1vh)*100);
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.startlayout {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  background-color: #ffea35;
+  width: 100%;
+  max-width: 900px;
+  height: 100%;
+  color: #413730;
 }
 
-.App-link {
-  color: #61dafb;
+.startlogo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: 25px;
+  font-weight: 700;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.startlogo div:nth-child(1) {
+  background-color: #413730;
+  color: #ffea35;
+  width: 350px;
+  height: 80px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50px;
+}
+
+.startlogo div:nth-child(2) {
+  margin-top: -15px;
+}
+
+.startbtn {
+  font-size: 17px;
+  font-weight: 700;
+  margin-top: 20px;
+}
+
+.qalayout {
+  display: flex;
+  flex-direction: column;
+  background-color: #bacee0;
+  width: 100%;
+  max-width: 900px;
+  height: 100%;
+  overflow: hidden;
+
+}
+
+.ttitle {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  align-items: center;
+  padding: 15px;
+  box-sizing: border-box;
+  font-weight: 700;
+}
+
+.ttitle div:nth-child(1) {
+  display: flex;
+  flex: 1;
+}
+
+.qalist {
+  flex-direction: column;
+  height: 100%;
+  overflow: scroll;
+  scrollbar-width: none;
+}
+
+.qalist::-webkit-scrollbar {
+  display: none;
+}
+
+.answer {
+  width: 100%;
+  background-color: #a1b6e9;
+
+  padding-bottom: 10px;
+  display: flex;
+  flex-direction: column;
+}
+
+.qaiteam {
+  display: flex;
+  flex: 1;
+  margin: 10px 15px 5px 15px;
+}
+
+.profile {
+  display: flex;
+  flex-direction: column;
+  width: 40px;
+  height: 40px;
+  background-color: #a1b6e9;
+  margin-right: 5px;
+  align-items: center;
+  justify-content: center;
+}
+
+.profile div:nth-child(1) {
+  background-color: #cbd6f2;
+  width: 8px;
+  height: 8px;
+  border-radius: 4px;
+}
+
+.profile div:nth-child(2) {
+  background-color: #cbd6f2;
+  width: 16px;
+  height: 16px;
+  border-radius: 8px 8px 0px 0px;
+  margin-top: 2px;
+
 }
