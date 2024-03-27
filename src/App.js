@@ -1,5 +1,7 @@
 import { useEffect, useState } from 'react';
+import { MdInsertEmoticon } from "react-icons/md";
 import './App.css';
+
 
 function App() {
   const setvh = () => {
@@ -156,12 +158,13 @@ function App() {
 
   const assignScore = (answer) => {
     switch (answer) {
-      case 'a':
-      case 'b':
-        return 1;
-      case 'c':
-      case 'd':
-        return 2;
+      case 'a': return 1;
+
+      case 'b': return 2;
+      case 'c': return 3;
+
+      case 'd': return 4;
+
       default:
         return 0;
     }
@@ -190,23 +193,127 @@ function App() {
 
     // 여행지 추천 함수 수정
     const recommendDestination = (totalScore) => {
-      if (totalScore >= 45) return '유럽 - 프랑스 파리';
-      else if (totalScore >= 40) return '유럽 - 이탈리아 로마';
-      else if (totalScore >= 35) return '아시아 - 일본 도쿄';
-      else if (totalScore >= 30) return '아시아 - 태국 방콕';
-      else if (totalScore >= 25) return '북미 - 미국 뉴욕';
-      else if (totalScore >= 20) return '남미 - 브라질 리오 데 자네이루';
-      else if (totalScore >= 15) return '오세아니아 - 호주 시드니';
-      else return '여행을 더 즐기고 경험한 후 다시 시도해보세요!';
+      if (totalScore >= 45) {
+        return {
+          name: '유럽 - 프랑스 파리',
+          img: `${process.env.PUBLIC_URL}/img/paris.jpeg`,
+          description: (
+            <>
+              <div className='text-center pt-5'>
+                <p><strong>파리, 프랑스 - 에펠탑 등 현지 문화체험</strong></p>
+                <p className='tokoyp'>여름에 파리를 방문한다면 에펠탑에서 멋진 파노라마를 즐길 수 있습니다. <br /> 루브르 박물관이나 오르세 박물관과 같은 세계적인 미술관을 탐험할 수도 있습니다.<br /> 파리는 빵, 와인, 치즈와 같은 현지 음식을 맛볼 수 있는 멋진 곳입니다.</p>
+              </div>
+            </>
+          )
+        };
+      } else if (totalScore >= 40) {
+        return {
+          name: '유럽 - 이탈리아 로마',
+          img: `${process.env.PUBLIC_URL}/img/rome.jpeg`,
+          description: (
+            <>
+              <div className='text-center pt-5'>
+                <p><strong>이탈리아 로마 - 빌라 보르게세에서 여름 휴식</strong></p>
+                <p className='tokoyp'>로마에서 여름을 보낼 때 빌라 보르게세를 방문하여 여름 더위를 식힐 수 있습니다. <br></br> 이 곳은 여러 박물관과 극장, 200여 종의 동물을 볼 수 있는 놀라운 동물원으로 <br></br>유명합니다. 빌라 보르게세 갤러리 티켓은 온라인에서 확인할 수 있으며,<br></br> 갤러리 투어를 예약하는 것이 좋습니다.</p>
+              </div>
+            </>
+          )
+        };
+      } else if (totalScore >= 35) {
+        return {
+          name: '아시아 - 일본 도쿄',
+          img: `${process.env.PUBLIC_URL}/img/tokyo.jpeg`,
+          description: (
+            <>
+              <div className='text-center pt-5'>
+                <p><strong>일본 도쿄 - 아사쿠사, 센소지 템플 등 관광지 탐방</strong></p>
+                <p className='tokoyp'>도쿄에서 아사쿠사의 전통적인 시장을 방문하거나 <br></br> 센소지 템플에서 고요한 순간을 누릴 수 있습니다. <br></br>또한 디즈니랜드나 오다이바 등 유명 관광지를 탐방할 수도 있습니다.</p>
+              </div>
+            </>
+          )
+        };
+      } else if (totalScore >= 30) {
+        return {
+          name: '아시아 - 태국 방콕',
+          img: `${process.env.PUBLIC_URL}/img/bangkok.jpeg`,
+          description: (
+            <>
+              <div className='text-center pt-5'>
+                <p><strong>태국 방콕 - 왕궁, 왓 아룬 등 관광명소 탐방</strong></p>
+                <p className='tokoyp'>왕궁이나 왓 아룬 등 현지 관광명소를 탐방할 수 있습니다. 또한 <br></br>태국 전통적인 마사지를 받으면서 휴식을 취할 수도 있습니다.</p>
+              </div>
+            </>
+          )
+        };
+      } else if (totalScore >= 25) {
+        return {
+          name: '북미 - 미국 뉴욕',
+          img: `${process.env.PUBLIC_URL}/img/new_york.jpeg`,
+          description: (
+            <>
+
+              <div className='text-center pt-5'>
+                <p ><strong>미국 뉴욕 - 센트럴 파크, 타임스 스퀘어 등 도시 관광</strong></p>
+                <p className='tokoyp'>     센트럴 파크에서
+                  피크닉을 즐기거나 <br />
+                  타임스 스퀘어에서 번화가를 즐길 수 있습니다. <br></br>또한 공연이나 전시회를 즐기는 것도 좋은 방법입니다.
+                </p>
+              </div>
+            </>
+          )
+        };
+      } else if (totalScore >= 20) {
+        return {
+          name: '남미 - 브라질 리오 데 자네이루',
+          img: `${process.env.PUBLIC_URL}/img/rio_de_janeiro.jpeg`,
+          description: (
+            <>
+              <div className='text-center pt-5'>
+                <p><strong>브라질 리오 데 자네이루 - 코파카바나 비치, 크리스토 레드엔셀 등 관광명소 탐방</strong></p>
+                <p className='tokoyp'>리오 데 자네이루에서 보낼 때는 코파카바나 비치에서 해변에서 즐길 수 있습니다. <br></br>또한 크리스토 레드엔셀에서 멋진 전망을 감상하거나  <br></br>삼바 공연을 관람할 수도 있습니다.</p>
+              </div>
+            </>
+          )
+        };
+      } else if (totalScore >= 15) {
+        return {
+          name: '오세아니아 - 호주 시드니',
+          img: `${process.env.PUBLIC_URL}/img/sydney.jpeg`,
+          description: (
+            <>
+              <div className='text-center pt-5'>
+                <p><strong>호주 시드니 - 시드니 오페라하우스, 하버 브릿지 등 관광명소 탐방</strong></p>
+                <p className='tokoyp'>시드니 오페라하우스에서 공연을 감상하거나 하버 브릿지를 건너면서 <br></br> 멋진 전망을 즐길 수 있습니다. 또한 해변에서 서핑을 즐기는 것도 좋은 방법입니다.</p>
+              </div>
+
+            </>
+          )
+        };
+      } else {
+        return { name: '여행을 더 즐기고 경험한 후 다시 시도해보세요!' };
+      }
     };
 
     const recommendedDestination = recommendDestination(totalScore);
     return (
-      <div>
-        <h2>테스트 결과</h2>
-        <p>총합: {totalScore}</p>
-        <p>당신에게 추천하는 여행지: {recommendedDestination}</p>
+      <div className='result d-flex flex-column '>
+        <div className='txt text-center'>
+          <h2>테스트 결과</h2>
+          <p>총합: {totalScore}</p>
+          <p>당신에게 추천하는 여행지: {recommendedDestination.name}</p>
+        </div>
+
+        <div className=' d-flex align-items-center justify-content-center  flex-column'>
+          <img src={recommendedDestination.img && recommendedDestination.img} alt={recommendedDestination.name} />
+        </div>
+
+        {recommendedDestination.description && recommendedDestination.description}
+
+
       </div>
+
+
+
     );
   };
 
@@ -223,7 +330,9 @@ function App() {
         </div>
         : page <= qalist.length ?
           <div className='qalayout d-flex flex-column'>
-
+            <div>
+              <img src="." alt="" />
+            </div>
             <div className='ttitle'>
               <div>나한테 어울리는 여행지는 ?</div>
               <div>{`${page} / ${qalist.length}`}</div>
@@ -252,7 +361,8 @@ function App() {
                 <div className='anscont'>
                   <div className='answers '>
                     <div>+</div>
-                    <div>#</div>
+                    <div><MdInsertEmoticon className='mx-2 mb-1' />#</div>
+
                   </div>
                   <div className='answerslayout'>
                     {qa.a.map((answer, index) => (

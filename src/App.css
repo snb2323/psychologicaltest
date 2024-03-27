@@ -1,7 +1,11 @@
+* {
+  font-family: "Nanum Gothic", sans-serif !important;
+  ;
+}
+
 .mbtilayout {
   width: 100vw;
   font-size: 14px;
-
   height: calc(var(--vh, 1vh)*100);
 }
 
@@ -12,6 +16,7 @@
   height: 100%;
   color: #413730;
 }
+
 
 .startlogo {
 
@@ -47,6 +52,7 @@
   height: 100%;
   overflow: hidden;
 
+
 }
 
 .ttitle {
@@ -70,6 +76,7 @@
   height: 100%;
   overflow: scroll;
   scrollbar-width: none;
+
 }
 
 .qalist::-webkit-scrollbar {
@@ -92,6 +99,8 @@
   display: flex;
   flex: 1;
   margin: 10px 15px 5px 15px;
+
+
 }
 
 .profile {
@@ -120,10 +129,11 @@
 }
 
 .question {
+  position: fixed;
   margin: 20px;
   display: flex;
   flex-direction: row;
-  padding-bottom: 400px;
+
 }
 
 .chatBox {
@@ -163,5 +173,28 @@
 }
 
 .qaitem {
+  padding-bottom: 400px;
+
   background-color: #bacee0;
+}
+
+.result {
+  flex-direction: row-reverse;
+}
+
+.result img {
+  max-width: 380px;
+}
+
+.img_p {
+  font-size: 18px;
+}
+
+
+.newyork {
+  flex-direction: row-reverse;
+}
+
+.tokoyp {
+  line-height: 2;
 }
