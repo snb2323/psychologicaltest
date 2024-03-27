@@ -201,7 +201,7 @@ function App() {
             <>
               <div className='text-center pt-5'>
                 <p><strong>파리, 프랑스 - 에펠탑 등 현지 문화체험</strong></p>
-                <p className='tokoyp'>여름에 파리를 방문한다면 에펠탑에서 멋진 파노라마를 즐길 수 있습니다. <br /> 루브르 박물관이나 오르세 박물관과 같은 세계적인 미술관을 탐험할 수도 있습니다.<br /> 파리는 빵, 와인, 치즈와 같은 현지 음식을 맛볼 수 있는 멋진 곳입니다.</p>
+                <p className='tokoyp'>파리를 방문한다면 에펠탑에서 <br></br> 멋진 파노라마를 즐길 수 있습니다. <br /> 루브르 박물관이나 오르세 박물관과 같은 <br></br> 세계적인 미술관을 탐험할 수도 있습니다.<br /> 파리는 빵, 와인, 치즈와 같은 <br></br>현지 음식을 맛볼 수 있는 멋진 곳입니다.</p>
               </div>
             </>
           )
@@ -214,7 +214,7 @@ function App() {
             <>
               <div className='text-center pt-5'>
                 <p><strong>이탈리아 로마 - 빌라 보르게세에서 여름 휴식</strong></p>
-                <p className='tokoyp'>로마에서 여름을 보낼 때 빌라 보르게세를 방문하여 여름 더위를 식힐 수 있습니다. <br></br> 이 곳은 여러 박물관과 극장, 200여 종의 동물을 볼 수 있는 놀라운 동물원으로 <br></br>유명합니다. 빌라 보르게세 갤러리 티켓은 온라인에서 확인할 수 있으며,<br></br> 갤러리 투어를 예약하는 것이 좋습니다.</p>
+                <p className='tokoyp'>로마에서 빌라 보르게세를 방문하여 <br></br> 여름 더위를 식힐 수 있습니다. 이 곳은 <br></br> 여러 박물관과 극장, 200여 종의 동물을 볼 수 있는  <br></br>놀라운 동물원으로 유명합니다. <br></br> 빌라 보르게세 갤러리 티켓은 온라인에서 확인할 수 있으며,<br></br> 갤러리 투어를 예약하는 것이 좋습니다.</p>
               </div>
             </>
           )
@@ -227,7 +227,7 @@ function App() {
             <>
               <div className='text-center pt-5'>
                 <p><strong>일본 도쿄 - 아사쿠사, 센소지 템플 등 관광지 탐방</strong></p>
-                <p className='tokoyp'>도쿄에서 아사쿠사의 전통적인 시장을 방문하거나 <br></br> 센소지 템플에서 고요한 순간을 누릴 수 있습니다. <br></br>또한 디즈니랜드나 오다이바 등 유명 관광지를 탐방할 수도 있습니다.</p>
+                <p className='tokoyp'>도쿄에서 아사쿠사의 전통적인 시장을 방문하거나 <br></br> 센소지 템플에서 고요한 순간을 누릴 수 있습니다. <br></br>또한 디즈니랜드나 오다이바 등 <br></br> 유명 관광지를 탐방할 수도 있습니다.</p>
               </div>
             </>
           )
@@ -240,7 +240,7 @@ function App() {
             <>
               <div className='text-center pt-5'>
                 <p><strong>태국 방콕 - 왕궁, 왓 아룬 등 관광명소 탐방</strong></p>
-                <p className='tokoyp'>왕궁이나 왓 아룬 등 현지 관광명소를 탐방할 수 있습니다. 또한 <br></br>태국 전통적인 마사지를 받으면서 휴식을 취할 수도 있습니다.</p>
+                <p className='tokoyp'>왕궁이나 왓 아룬 등 현지 관광명소를 탐방할 수 있습니다.<br></br> 또한 <br></br>태국 전통적인 마사지를 받으면서 휴식을 취할 수도 있습니다.</p>
               </div>
             </>
           )
@@ -269,28 +269,31 @@ function App() {
           description: (
             <>
               <div className='text-center pt-5'>
-                <p><strong>브라질 리오 데 자네이루 - 코파카바나 비치, 크리스토 레드엔셀 등 관광명소 탐방</strong></p>
-                <p className='tokoyp'>리오 데 자네이루에서 보낼 때는 코파카바나 비치에서 해변에서 즐길 수 있습니다. <br></br>또한 크리스토 레드엔셀에서 멋진 전망을 감상하거나  <br></br>삼바 공연을 관람할 수도 있습니다.</p>
+                <p><strong>브라질 리오 데 자네이루 - 코파카바나 비치, 크리스토 관광명소 탐방</strong></p>
+                <p className='tokoyp'>자네이루에서 보낼 때는 코파카바나 비치에서 해변을 즐길 수 있습니다. <br></br>또한 크리스토 레드엔셀에서 멋진 전망을 감상하거나  <br></br>삼바 공연을 관람할 수도 있습니다.</p>
               </div>
             </>
           )
         };
-      } else if (totalScore >= 15) {
+      } else if (totalScore >= 13) {
         return {
           name: '오세아니아 - 호주 시드니',
           img: `${process.env.PUBLIC_URL}/img/sydney.jpeg`,
           description: (
             <>
               <div className='text-center pt-5'>
-                <p><strong>호주 시드니 - 시드니 오페라하우스, 하버 브릿지 등 관광명소 탐방</strong></p>
-                <p className='tokoyp'>시드니 오페라하우스에서 공연을 감상하거나 하버 브릿지를 건너면서 <br></br> 멋진 전망을 즐길 수 있습니다. 또한 해변에서 서핑을 즐기는 것도 좋은 방법입니다.</p>
+                <p><strong>호주 시드니 - 오페라하우스, 하버 브릿지 관광명소 탐방</strong></p>
+                <p className='tokoyp'>시드니 오페라하우스에서 공연을 감상하거나 <br></br>하버 브릿지를 건너면서  멋진 전망을 즐길 수 있습니다.<br></br> 또한 해변에서 서핑을 즐기는 것도 좋은 방법입니다.</p>
               </div>
 
             </>
           )
         };
       } else {
-        return { name: '여행을 더 즐기고 경험한 후 다시 시도해보세요!' };
+        return {
+          name: '여행을 더 즐기고 경험한 후 다시 시도해보세요!',
+          img: `${process.env.PUBLIC_URL}/img/img.jpg`,
+        };
       }
     };
 
