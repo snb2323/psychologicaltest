@@ -1,6 +1,7 @@
 .mbtilayout {
   width: 100vw;
   font-size: 14px;
+
   height: calc(var(--vh, 1vh)*100);
 }
 
@@ -40,7 +41,7 @@
 }
 
 .qalayout {
-  background-color: #bacee0;
+  /* background-color: #bacee0; */
   width: 100%;
   max-width: 900px;
   height: 100%;
@@ -56,6 +57,7 @@
   padding: 15px;
   box-sizing: border-box;
   font-weight: 700;
+  background-color: #bacee0;
 }
 
 .ttitle div:nth-child(1) {
@@ -76,7 +78,7 @@
 
 .answer {
   width: 100%;
-  background-color: #a1b6e9;
+  background-color: #fff;
   padding-bottom: 10px;
   display: flex;
   flex-direction: column;
@@ -98,6 +100,7 @@
   background-color: #a1b6e9;
   margin-right: 7px;
   border-radius: 15px;
+
 }
 
 .profile div:nth-child(1) {
@@ -120,6 +123,7 @@
   margin: 20px;
   display: flex;
   flex-direction: row;
+  padding-bottom: 400px;
 }
 
 .chatBox {
@@ -137,4 +141,27 @@
   color: #fff;
 }
 
-.qalist {}
+.answers {
+  text-align: center;
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid #eee;
+  padding: 10px;
+  font-size: 22px;
+  color: #969696;
+  background-color: #fff;
+  margin-bottom: 20px;
+
+}
+
+.answer {
+  margin-bottom: 15px;
+  text-align: center;
+  box-shadow: 2px 2px 0px #ededed;
+  border: 1px solid #ededed;
+
+}
+
+.qaitem {
+  background-color: #bacee0;
+}
