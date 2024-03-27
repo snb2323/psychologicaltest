@@ -1,70 +1,27 @@
-# Getting Started with Create React App
+<h1>기획</h1>
+<h2>아이템 선정이유 : </h2>
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+<p>아이템을 선정한 이유에는 최근 날씨가 좋아지면서 여행 수요가 증가하고, 많은 사람들이 여행을 즐기고자 하는 데에 대한 반응성이 있습니다. 더불어 많은 사람들이 자신이 무엇을 좋아하는지 명확히 인지하지 못하고 있거나, 다양한 여행지를 선택하기에 혼란을 겪는 경우가 많아졌습니다. 이러한 상황에서, 이 프로젝트는 사용자들이 여행 취향을 보다 명확히 이해하고, 그에 맞는 여행지를 추천받을 수 있도록 도와주고자 합니다.</p>
 
-## Available Scripts
+<h2>기획컨셉 : </h2>
+<ol>
+  <li>소통의 장 제공 : 사용자들은 질문에 대한 답변을 통해 자신의 여행 선호도를 표현할 수 있습니다. 이러한 소통을 통해 사용자들은 자신의 취향을 더 잘 이해하고, 그에 맞는 여행지를 추천받을 수 있습니다.</li>
+  <li>다양한 추천 결과 제공 : 각 질문에 대한 다양한 선택지와 각 선택지마다 다른 여행지를 추천함으로써, 사용자들에게 다양한 여행 경험을 제공합니다. 이는 사용자들이 새로운 여행지를 발견하고 자신에게 맞는 여행을 계획하는 데 도움이 됩니다.</li>
+  <li>사용자 경험 강화 : 사용자들이 테스트를 진행하면서 즐거운 경험을 할 수 있도록,  질문이 제시되며, 마지막에는 추천된 여행지에 대한 상세한 설명과 이미지를 제공하여 사용자들이 더욱 실감 나는 여행 경험을 할 수 있도록 합니다.</li>
+</ol>
 
-In the project directory, you can run:
+<h1>이슈</h1>
+<h2>문제 / 해결</h2>
+<p> 1.문제 : 프로젝트에서 이미지 파일을 사용할 때 경로 문제가 발생했습니다. 특히 이미지 파일의 경로를 지정할 때, 절대 경로를 사용하면 제대로 작동하지 않는 문제가 발생했습니다. 예를 들어, 이미지 파일의 경로를 직접 지정하면 빌드된 애플리케이션에서 이미지를 찾지 못하는 문제가 발생했습니다. </p>
+<p>1.해결 : process.env.PUBLIC_URL 을 사용하여 상대 경로를 설정했습니다. 이렇게 함으로써 애플리케이션이 빌드될 때 이미지 파일의 경로가 동적으로 설정되어, 애플리케이션 내에서 이미지를 올바르게 찾을 수 있게 되었습니다. 따라서 애플리케이션을 배포하거나 빌드할 때 발생할 수 있는 경로 문제를 사전에 방지할 수 있었습니다. </p>
 
-### `npm start`
+<p>2.문제 : 답변 배열을 업데이트할 때 직접 기존 배열을 수정하는 방식을 사용했습니다. 이로 인해 문제가 발생했습니다. 이전의 방식으로는 답변을 입력할 때마다 합산된 점수가 고정되어 업데이트되지 않았습니다. 즉, 새로운 답변을 선택해도 결과가 변경되지 않았습니다. </p>
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+<P>2.해결 : 새로운 방식으로 답변 배열을 업데이트하는 함수를 도입했습니다. 이를 통해 기존의 배열을 직접 수정하는 대신, spread 연산자를 사용하여 기존 배열의 복사본을 만들고 이 복사본을 수정한 후에 업데이트했습니다. 이러한 방식을 통해 이전에 발생한 문제가 해결되었습니다.  새로운 답변이 선택될 때마다 정확하게 합산된 점수를 계산할 수 있게 되었습니다</P>
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+<h1>개발환경</h1>
+<ul>
+  <li>react ^18.2.0</li>
+  <li>bootstarp ^5.3.3</li>
+  <li>bootstrap-icons ^1.11.3</li>
+</ul>
